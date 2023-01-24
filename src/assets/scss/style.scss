@@ -1,0 +1,292 @@
+@use "sass:math";
+
+@import "_reset.scss";
+
+// === font-face ===
+@import "_fonts.scss";
+
+// === variables ===
+@import "_variables.scss";
+
+// === mixins ===
+@import "_mixins.scss";
+
+// common
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: $font-main;
+  font-weight: 400;
+
+  background-color: $color-bg;
+}
+
+.container {
+  max-width: 1390px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 24px 64px;
+  border: 1px solid $color-accent;
+
+  font-weight: 500;
+  font-size: math.div(30px, 16px) + rem;
+
+  background: rgba(233, 215, 167, 0.1);
+}
+
+.btn_animation {
+  border-color: #ffce4e;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #ffce4e inset, 0 0 0 0 #ffce4e;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.btn_animation:hover {
+  box-shadow: 0 0 10px 0 #ffce4e inset, 0 0 10px 4px #ffce4e;
+}
+
+// Header
+.header {
+  position: relative;
+  &__content {
+    & .btn {
+      padding: 24px 76px;
+      color: $color-main-white;
+      font-weight: 600;
+      font-size: math.div(28px, 16px) + rem;
+      line-height: math.div(36px, 16px) + rem;
+
+      transition-property: color background-color;
+      transition-duration: $transition-duration;
+      transition-timing-function: $transition-timing-function;
+
+      &:hover {
+        color: $color-main-black;
+        background-color: $color-accent;
+      }
+    }
+    & .btn:first-child {
+      margin-right: 48px;
+    }
+  }
+  &__title {
+    margin-top: 30px;
+    margin-bottom: 77px;
+
+    font-family: $font-secondary;
+    color: $color-main;
+    font-weight: 700;
+    font-size: math.div(85px, 16px) + rem;
+    line-height: math.div(130px, 16px) + rem;
+
+    & > span {
+      color: $color-accent;
+    }
+  }
+  &__buttons {
+    margin-bottom: 120px;
+  }
+  &__main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 100px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 45%;
+
+    background: rgba(79, 70, 78, 0.45);
+    z-index: -1;
+  }
+}
+
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 38px;
+  margin-bottom: 140px;
+
+  & .btn {
+    padding: 20px 30px;
+
+    color: $color-accent;
+    font-weight: 600;
+    font-size: math.div(18px, 16px) + rem;
+
+    transition-property: color background-color;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+
+    &:hover {
+      color: $color-main-black;
+      background-color: $color-accent;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+  }
+  &__link {
+    --side-padding: 32px;
+
+    position: relative;
+
+    padding: 10px var(--side-padding);
+
+    color: $color-main;
+    font-weight: 500;
+    font-size: math.div(18px, 16px) + rem;
+    line-height: math.div(21px, 16px) + rem;
+    letter-spacing: 0.02em;
+
+    transition: color $transition-duration $transition-timing-function;
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 2px;
+      width: calc(100% - var(--side-padding) * 2);
+      margin-top: 8px;
+      margin-left: var(--side-padding);
+
+      background-color: $color-accent;
+      opacity: 0;
+      transition: opacity $transition-duration $transition-timing-function;
+      // transition-delay: 0.1s;
+    }
+    &:hover {
+      color: $color-accent;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+}
+
+.statistics {
+  display: flex;
+  column-gap: 102px;
+
+  &__number {
+    font-family: $font-secondary;
+    color: $color-main;
+    font-weight: 700;
+    font-size: math.div(62px, 16px) + rem;
+    line-height: math.div(78px, 16px) + rem;
+  }
+  &__name {
+    color: $color-main-gray;
+    font-size: math.div(24px, 16px) + rem;
+    line-height: math.div(35px, 16px) + rem;
+  }
+}
+
+.nft {
+  position: relative;
+
+  &__top {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    right: 22px;
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    background: linear-gradient(
+      92.8deg,
+      rgba(255, 137, 61, 0.09) -52.37%,
+      rgba(250, 250, 250, 0.8) 137.41%
+    );
+    backdrop-filter: blur(8px);
+    & .part {
+      font-family: $font-secondary;
+    }
+
+    & .part__top {
+      margin-bottom: 12px;
+
+      color: $color-additional-gray;
+      font-weight: 500;
+      font-size: math.div(18px, 16px) + rem;
+    }
+
+    & .part__bottom {
+      color: $color-main-white;
+      font-weight: 700;
+      font-size: math.div(32px, 16px) + rem;
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 142px;
+    padding-left: 60px;
+    padding-right: 40px;
+
+    background-color: $color-main-white;
+
+    &-btn {
+      padding-left: 45px;
+      padding-right: 45px;
+
+      color: $color-main-black;
+      font-weight: 700;
+      font-size: math.div(24px, 16px) + rem;
+
+      // background-color: $color-accent;
+    }
+    & .part {
+      &__top {
+        margin-bottom: 10px;
+
+        color: $color-additional-black;
+        font-weight: 600;
+        font-size: math.div(28px, 16px) + rem;
+      }
+      &__bottom {
+        color: $color-third-gray;
+        font-size: math.div(24px, 16px) + rem;
+      }
+    }
+  }
+}
