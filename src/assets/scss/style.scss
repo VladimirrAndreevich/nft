@@ -61,6 +61,14 @@ a {
   box-shadow: 0 0 10px 0 #ffce4e inset, 0 0 10px 4px #ffce4e;
 }
 
+.section-title {
+  font-family: $font-secondary;
+  color: $color-main;
+  font-weight: 700;
+  font-size: math.div(64px, 16px) + rem;
+  line-height: 1em;
+}
+
 // Header
 .header {
   position: relative;
@@ -289,4 +297,40 @@ a {
       }
     }
   }
+}
+
+//==== Companies ====
+.companies {
+  padding-top: 190px;
+  padding-bottom: 108px;
+
+  & > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__svg {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.coinbase-svg {
+  width: 165px;
+  & > use {
+    transform: translateY(-4px);
+  }
+}
+.binance-svg {
+  width: 240px;
+}
+.bitmex-svg {
+  width: 200px;
+}
+
+//==== auctions =====
+.auctions {
+  padding-top: 50px;
+  padding-bottom: 80px;
 }

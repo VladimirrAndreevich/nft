@@ -186,6 +186,14 @@ a {
     box-shadow: 0 0 10px 0 #ffce4e inset, 0 0 10px 4px #ffce4e;
 }
 
+.section-title {
+    font-family: "Oxanium", cursive;
+    color: #f5fbf2;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1em;
+}
+
 .header {
     position: relative;
 }
@@ -396,4 +404,41 @@ a {
 .nft__bottom .part__bottom {
     color: #594d5e;
     font-size: 1.5rem;
+}
+
+.companies {
+    padding-top: 190px;
+    padding-bottom: 108px;
+}
+
+.companies > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.companies__svg {
+    display: flex;
+    align-items: center;
+}
+
+.coinbase-svg {
+    width: 165px;
+}
+
+.coinbase-svg > use {
+    transform: translateY(-4px);
+}
+
+.binance-svg {
+    width: 240px;
+}
+
+.bitmex-svg {
+    width: 200px;
+}
+
+.auctions {
+    padding-top: 50px;
+    padding-bottom: 80px;
 }
