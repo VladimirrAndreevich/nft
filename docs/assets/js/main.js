@@ -15,6 +15,8 @@ var swiper = new Swiper(".auct-swiper", {
     nextEl: ".swiper-button-next1",
     prevEl: ".swiper-button-prev1",
   },
+  freeMode: true,
+  grabCursor: true,
 });
 console.log(2)
 console.log(3)

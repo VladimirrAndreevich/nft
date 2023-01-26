@@ -552,3 +552,45 @@ a {
 .swiper-button-prev1 {
   transform: rotate(180deg);
 }
+
+// how
+.how {
+  margin-top: 174px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-row {
+      margin-top: 51px;
+      height: 10px;
+    }
+  }
+
+  &__img-wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    // padding: 25px;
+
+    background-color: $color-item-background;
+  }
+
+  &__item-heading {
+    margin-top: 32px;
+
+    color: $color-accent;
+    font-weight: 600;
+    font-size: math.div(24px, 16px) + rem;
+  }
+}

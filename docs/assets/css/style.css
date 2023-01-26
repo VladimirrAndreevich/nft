@@ -640,3 +640,41 @@ a {
 .swiper-button-prev1 {
     transform: rotate(180deg);
 }
+
+.how {
+    margin-top: 174px;
+}
+
+.how__list {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.how__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how__item-row {
+    margin-top: 51px;
+    height: 10px;
+}
+
+.how__img-wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background-color: #372839;
+}
+
+.how__item-heading {
+    margin-top: 32px;
+    color: #ffce4e;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
