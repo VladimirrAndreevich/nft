@@ -186,12 +186,38 @@ a {
     box-shadow: 0 0 10px 0 #ffce4e inset, 0 0 10px 4px #ffce4e;
 }
 
-.section-title {
+.title-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.title-wrapper > .section-title {
+    position: relative;
     font-family: "Oxanium", cursive;
     color: #f5fbf2;
     font-weight: 700;
     font-size: 4rem;
     line-height: 1em;
+}
+
+.title-wrapper > .section-title.highlight::before {
+    content: "";
+    position: absolute;
+    left: -45px;
+    top: -27.5px;
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.title-wrapper > .section-title.highlight_purple::before {
+    background-color: #8613a5;
+}
+
+.title-wrapper > .section-title.highlight_red::before {
+    background-color: #e03054;
 }
 
 .header {
@@ -413,12 +439,7 @@ a {
 
 .companies > .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.companies__svg {
-    display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -441,4 +462,181 @@ a {
 .auctions {
     padding-top: 50px;
     padding-bottom: 80px;
+}
+
+.auctions__btn-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 48px;
+    -moz-column-gap: 28px;
+    column-gap: 28px;
+}
+
+.auctions__btn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 84px;
+    color: #f5fbf2;
+    font-weight: 500;
+    font-size: 1.875rem;
+    transition-property: color background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.auctions__btn:hover {
+    color: #000000;
+    background-color: #ffce4e;
+}
+
+.auct-swiper__img-wrapper {
+    position: relative;
+}
+
+.auct-swiper__main-img {
+    width: 100%;
+    height: 360px;
+}
+
+.auct-swiper__timer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 15px 45px;
+    color: #f5fbf2;
+    font-weight: 600;
+    font-size: 1.5rem;
+    background: linear-gradient(125.33deg, rgba(134, 19, 165, 0.9) 18.61%, rgba(250, 250, 250, 0.7) 137.4%);
+}
+
+.auct-swiper__info {
+    width: 100%;
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auct-swiper__info-avatar {
+    width: 54px;
+    border-radius: 50%;
+}
+
+.auct-swiper__info-inner {
+    margin-right: auto;
+    margin-left: 19px;
+    text-align: left;
+}
+
+.auct-swiper__info-name {
+    color: #f5fbf2;
+    font-weight: 500;
+    font-size: 1.75rem;
+}
+
+.auct-swiper__info-author {
+    display: inline-block;
+    margin-top: 8px;
+    color: #bdaac1;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.auct-swiper__info-heart {
+    width: 28px;
+    height: 26px;
+    margin-right: 9px;
+}
+
+.auct-swiper__info-counter {
+    color: #76607a;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.auct-swiper__bid {
+    width: 100%;
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auct-swiper__bid-current {
+    color: #c6bfc8;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.auct-swiper__bid-price {
+    font-family: "Oxanium", cursive;
+    color: #f5fbf2;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.auct-swiper__btn {
+    width: 100%;
+    margin-top: 40px;
+    border-color: #fde8b3;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.5rem;
+    transition-property: color background-color border-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.auct-swiper__btn:hover {
+    color: #000000;
+    background-color: #ffce4e;
+    border-color: #ffce4e;
+}
+
+.swiper {
+  /* width: 500px; */
+    margin-top: 84px;
+}
+
+.swiper-slide {
+    width: 495px;
+    padding: 32px;
+    text-align: center;
+    font-size: 18px;
+    background: #3d2942;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+}
+
+.swiper-button-prev1,
+.swiper-button-next1 {
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+    background-image: url("../img/arrow-right.svg");
+}
+
+.swiper-button-prev1:hover,
+.swiper-button-next1:hover {
+    cursor: pointer;
+}
+
+.swiper-button-prev1.swiper-button-disabled,
+.swiper-button-next1.swiper-button-disabled {
+    opacity: 0.4;
+}
+
+.swiper-button-prev1.swiper-button-disabled:hover,
+.swiper-button-next1.swiper-button-disabled:hover {
+    cursor: initial;
+}
+
+.swiper-button-prev1 {
+    transform: rotate(180deg);
 }
