@@ -1,0 +1,25 @@
+@keyframes appearSlide {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes disappearSlide {
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes appearNavigationBtn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes disappearNavigationBtn {
+  to {
+    opacity: 0;
+  }
+}

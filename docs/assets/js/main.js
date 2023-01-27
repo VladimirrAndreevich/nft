@@ -9,14 +9,27 @@ var swiper = new Swiper(".auct-swiper", {
   // speed: 500,
   // slidesPerView: 3,
 
-  slidesPerView: 2.8,
+  slidesPerView: "auto",
   spaceBetween: 42,
   navigation: {
     nextEl: ".swiper-button-next1",
     prevEl: ".swiper-button-prev1",
   },
-  freeMode: true,
+  // freeMode: true,
   grabCursor: true,
 });
+
+var swiper2 = new Swiper("#popular-swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 36,
+  grabCursor: true,
+  centeredSlides: true,
+  initialSlide: 1,
+  navigation: {
+    nextEl: ".popular__button-next",
+    prevEl: ".popular__button-prev",
+  },
+});
+// swiper2.slideNext();
 console.log(2)
 console.log(3)
