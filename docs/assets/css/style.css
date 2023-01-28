@@ -940,3 +940,78 @@ a {
     font-weight: 700;
     font-size: 1.25rem;
 }
+
+.creators {
+    padding-top: 140px;
+    padding-bottom: 80px;
+}
+
+.creators__title {
+    margin-bottom: 112px;
+}
+
+.creators__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 56px;
+}
+
+.creators__link {
+    display: flex;
+    align-items: center;
+    width: 608px;
+    height: 156px;
+    border-left: 2px solid #e03054;
+    background-color: #302034;
+}
+
+.creators__avatar {
+    border-radius: 50%;
+    margin-right: 24px;
+}
+
+.creators__left-side {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 29px;
+}
+
+.creators__right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 176px;
+    height: 65%;
+    row-gap: 10px;
+    border-left: 3px solid #49374e;
+}
+
+.creators__items-amount {
+    font-family: "Oxanium", cursive;
+    color: #f5fbf2;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.creators__items {
+    color: #908294;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.creators__name {
+    font-family: "Oxanium", cursive;
+    color: #f5fbf2;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.creators__price {
+    color: #bdaac1;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
