@@ -849,6 +849,8 @@ a {
 
 //creators
 .creators {
+  position: relative;
+
   padding-top: 140px;
   padding-bottom: 80px;
 
@@ -862,7 +864,13 @@ a {
     gap: 56px;
   }
 
+  &__item {
+    overflow: hidden;
+  }
+
   &__link {
+    position: relative;
+
     display: flex;
     align-items: center;
 
@@ -871,6 +879,44 @@ a {
     border-left: 2px solid $color-creators-effect;
 
     background-color: $color-creators-bg;
+
+    z-index: 2;
+    & > * {
+      z-index: 2;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+
+      overflow: hidden;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      width: 104px;
+      height: 104px;
+      margin-left: 29px;
+      border-radius: 50%;
+
+      background-color: $color-creators-effect;
+      transition: transform $transition-duration-effect
+        $transition-timing-function-effect;
+
+      z-index: 1;
+
+      transform: scale(0.9);
+    }
+
+    &:hover::after {
+      transform: scale(11);
+    }
   }
   &__avatar {
     border-radius: 50%;
@@ -886,6 +932,8 @@ a {
     padding-left: 29px;
   }
   &__right-side {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -893,10 +941,23 @@ a {
 
     flex-shrink: 0;
     width: 176px;
-    height: 65%;
+    height: 100%;
     row-gap: 10px;
 
-    border-left: 3px solid #49374e;
+    // border-left: 3px solid #49374e;
+
+    background-color: rgba(48, 32, 52, 0.9);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 28px;
+      bottom: 28px;
+      left: 0;
+
+      width: 3px;
+      background-color: #49374e;
+    }
   }
   &__items-amount {
     font-family: $font-secondary;
