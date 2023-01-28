@@ -23,3 +23,16 @@
     opacity: 0;
   }
 }
+
+//categories
+@keyframes appearCategoriesBtn {
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes disappearCategoriesBtn {
+  to {
+    opacity: 0;
+  }
+}

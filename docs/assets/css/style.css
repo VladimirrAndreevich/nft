@@ -169,6 +169,18 @@ table {
     }
 }
 
+@keyframes appearCategoriesBtn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes disappearCategoriesBtn {
+    to {
+        opacity: 0;
+    }
+}
+
 *,
 *::after,
 *::before {
@@ -790,4 +802,141 @@ a {
     right: 10px;
     transform: translateY(-50%);
     animation: appearNavigationBtn 0.6s forwards;
+}
+
+.categories {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.categories__btn {
+    margin-top: 84px;
+}
+
+.swiper-wrapper .categories__slide {
+    width: 415px;
+    padding: 32px;
+}
+
+.swiper-wrapper .categories__slide:hover .categories__btn-bid {
+    opacity: 1;
+}
+
+.swiper-wrapper .categories__slide:hover .categories__wrapper-img::after {
+    opacity: 1;
+}
+
+.categories__wrapper-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.categories__wrapper-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.categories__main-img {
+    z-index: 1;
+}
+
+.categories__btn-bid {
+    position: absolute;
+    background-color: #ffce4e;
+    padding: 22px 58px;
+    color: #000000;
+    font-weight: 600;
+    font-size: 1.5rem;
+    z-index: 3;
+    opacity: 0;
+    transition-property: opacity box-shadow transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.categories__btn-bid:hover {
+    box-shadow: 8px 8px 2px #c79f3b;
+    transform: translate(-8px, -8px);
+}
+
+.categories__btn-bid:active {
+    box-shadow: 0px 0px 2px #c79f3b;
+    transform: translate(0px, 0px);
+}
+
+.categories__info {
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categories__info-avatar {
+    width: 58px;
+    border-radius: 50%;
+}
+
+.categories__info-inner {
+    margin-right: auto;
+    margin-left: 12px;
+    text-align: left;
+}
+
+.categories__info-name {
+    color: #f5fbf2;
+    font-weight: 600;
+    font-size: 1.9375rem;
+}
+
+.categories__info-author {
+    display: inline-block;
+    margin-top: 8px;
+    color: #bdaac1;
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+
+.categories__info-heart {
+    width: 28px;
+    height: 26px;
+    margin-right: 8px;
+    transform: translateY(2px);
+}
+
+.categories__info-counter {
+    color: #76607a;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.categories__bid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 26px;
+}
+
+.categories__bid-current {
+    color: #c6bfc8;
+    font-size: 1.25rem;
+}
+
+.categories__bid-price {
+    font-family: "Oxanium", cursive;
+    color: #f5fbf2;
+    font-weight: 700;
+    font-size: 1.25rem;
 }

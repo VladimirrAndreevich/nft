@@ -31,5 +31,12 @@ var swiper2 = new Swiper("#popular-swiper", {
   },
 });
 // swiper2.slideNext();
+
+var swiper3 = new Swiper(".categories__swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 42,
+  grabCursor: true,
+  freeMode: true,
+});
 console.log(2)
 console.log(3)
