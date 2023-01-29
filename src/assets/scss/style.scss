@@ -984,3 +984,67 @@ a {
     font-size: math.div(24px, 16px) + rem;
   }
 }
+
+//subscribe
+.subscribe {
+  padding-top: 150px;
+  padding-bottom: 118px;
+
+  background-image: url("../img/subscribe-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &__form-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+
+    width: 680px;
+    height: 96px;
+  }
+
+  &__email {
+    width: 100%;
+    border: 1px solid $color-subscribe-input-submit-bg;
+
+    background: none;
+
+    padding-left: 53px;
+    padding-right: 53px;
+
+    color: $color-main;
+    font-size: math.div(24px, 16px) + rem;
+
+    &::placeholder {
+      color: #a48ea9;
+      font-size: math.div(24px, 16px) + rem;
+    }
+  }
+
+  &__submit {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 244px;
+
+    border: none;
+
+    color: $color-subscribe-input-submit;
+    font-weight: 700;
+    font-size: math.div(24px, 16px) + rem;
+
+    background-color: $color-subscribe-input-submit-bg;
+    cursor: pointer;
+
+    transition: box-shadow $transition-duration $transition-timing-function;
+
+    &:hover {
+      box-shadow: 2px 0px 10px $color-subscribe-input-submit-bg;
+    }
+  }
+}
