@@ -1123,3 +1123,101 @@ a {
 .subscribe__submit:hover {
     box-shadow: 2px 0px 10px #e7b226;
 }
+
+.footer {
+    padding-top: 109px;
+    padding-bottom: 116px;
+}
+
+.footer > .container {
+    display: flex;
+}
+
+.footer__logo {
+    width: 194px;
+    height: 194px;
+    background-image: url("../img/big-avatar.png");
+}
+
+.footer__wrapper {
+    flex-basis: 390px;
+    margin-left: 50px;
+    margin-right: auto;
+}
+
+.footer__text {
+    color: #96839b;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 2.25rem;
+}
+
+.footer__rights {
+    display: inline-block;
+    margin-top: 52px;
+    color: #96839b;
+    font-size: 1.25rem;
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 226px;
+    column-gap: 226px;
+}
+
+.footer__list-heading {
+    margin-bottom: 18px;
+    color: #f5fbf2;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.footer__link {
+    color: #96839b;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 3.125rem;
+    transition: color 0.5s ease;
+}
+
+.footer__link:hover {
+    color: #ffffff;
+}
+
+.footer__socials {
+    display: flex;
+    margin-top: 45px;
+}
+
+.footer__social {
+    padding-left: 15px;
+    padding-right: 15px;
+    fill: #d53d5c;
+    transition: fill 0.5s ease;
+}
+
+.footer__social:hover {
+    fill: #f7d7ff;
+}
+
+.footer__social > svg {
+    width: 40px;
+    height: 26px;
+}
+
+.footer__social > .youtube {
+    width: 38px;
+}
+
+.footer__social > .twitter {
+    width: 32px;
+}
+
+.footer__social > .facebook {
+    width: 14px;
+}
+
+.footer__social > .googleplus {
+    width: 28px;
+}
