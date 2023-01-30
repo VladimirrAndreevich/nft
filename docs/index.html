@@ -43,6 +43,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="body">
     
@@ -72,16 +75,16 @@
     
         <div class="header__main">
           <div class="header__content">
-            <h1 class="header__title">
+            <h1 class="header__title" data-aos="fade-right" data-aos-once="true">
               Explore, Buy and Sell <span>the Best NFTs!</span>
             </h1>
     
-            <div class="header__buttons">
+            <div class="header__buttons" data-aos="fade-right" data-aos-once="true">
               <a class="btn" href="#">Explore</a>
               <a class="btn" href="#">Create</a>
             </div>
     
-            <ul class="statistics">
+            <ul class="statistics" data-aos="fade-right" data-aos-once="true">
               <li class="statistics__item">
                 <div class="statistics__number">32k+</div>
                 <div class="statistics__name">Artworks</div>
@@ -96,7 +99,7 @@
               </li>
             </ul>
           </div>
-          <div class="nft header__nft">
+          <div class="nft header__nft" data-aos="fade-left" data-aos-once="true">
             <div class="nft__top">
               <div class="part">
                 <div class="part__top">Current bid</div>
@@ -126,7 +129,7 @@
     
     <main class="main">
       <section class="companies">
-      <div class="container">
+      <div class="container" data-aos="zoom-in" data-aos-once="true">
         <svg class="companies__svg coinbase-svg">
           <use xlink:href="assets/img/sprite-companies.svg#coinbase"></use>
         </svg>
@@ -144,7 +147,13 @@
      <section class="auctions">
       <div class="container">
         <div class="title-wrapper">
-          <h2 class="section-title highlight highlight_purple">Live Auctions</h2>
+          <h2
+            class="section-title highlight highlight_purple"
+            data-aos="fade-right"
+            data-aos-once="true"
+          >
+            Live Auctions
+          </h2>
         </div>
     
         <div class="swiper auct-swiper">
@@ -306,7 +315,7 @@
         </div>
     
         <ul class="how__list">
-          <li class="how__item">
+          <li class="how__item" data-aos="zoom-in" data-aos-once="true">
             <div class="how__img-wrapp">
               <img class="how__img" src="assets/img/tips/wallet.svg" alt="" />
             </div>
@@ -318,7 +327,7 @@
             alt="arrow to"
             class="how__item-row"
           />
-          <li class="how__item">
+          <li class="how__item" data-aos="zoom-in" data-aos-once="true">
             <div class="how__img-wrapp">
               <img class="how__img" src="assets/img/tips/collection.svg" alt="" />
             </div>
@@ -330,7 +339,7 @@
             alt="arrow to"
             class="how__item-row"
           />
-          <li class="how__item">
+          <li class="how__item" data-aos="zoom-in" data-aos-once="true">
             <div class="how__img-wrapp">
               <img
                 class="how__img"
@@ -346,7 +355,7 @@
             alt="arrow to"
             class="how__item-row"
           />
-          <li class="how__item">
+          <li class="how__item" data-aos="zoom-in" data-aos-once="true">
             <div class="how__img-wrapp">
               <img class="how__img" src="assets/img/tips/sales-report.svg" alt="" />
             </div>
@@ -359,7 +368,13 @@
      <section class="popular">
       <div class="container">
         <div class="title-wrapper">
-          <h2 class="section-title highlight highlight_red">Popular Collections</h2>
+          <h2
+            class="section-title highlight highlight_red"
+            data-aos="fade-right"
+            data-aos-once="true"
+          >
+            Popular Collections
+          </h2>
         </div>
     
         <div class="swiper popular__slider" id="popular-swiper">
@@ -454,7 +469,11 @@
      <section class="categories">
       <div class="container">
         <div class="title-wrapper">
-          <h2 class="section-title highlight highlight_purple">
+          <h2
+            class="section-title highlight highlight_purple"
+            data-aos="fade-right"
+            data-aos-once="true"
+          >
             Explore By Categories
           </h2>
         </div>
@@ -605,13 +624,17 @@
       <section class="creators">
       <div class="container">
         <div class="title-wrapper">
-          <h2 class="section-title highlight highlight_red creators__title">
+          <h2
+            class="section-title highlight highlight_red creators__title"
+            data-aos="zoom-in"
+            data-aos-once="true"
+          >
             Top Creators
           </h2>
         </div>
     
         <ul class="creators__list">
-          <li class="creators__item">
+          <li class="creators__item" data-aos="zoom-in-right">
             <a href="#" class="creators__link">
               <div class="creators__left-side">
                 <img
@@ -631,7 +654,7 @@
               </div>
             </a>
           </li>
-          <li class="creators__item">
+          <li class="creators__item" data-aos="zoom-in-left">
             <a href="#" class="creators__link">
               <div class="creators__left-side">
                 <img
@@ -651,7 +674,7 @@
               </div>
             </a>
           </li>
-          <li class="creators__item">
+          <li class="creators__item" data-aos="zoom-in-right">
             <a href="#" class="creators__link">
               <div class="creators__left-side">
                 <img
@@ -671,7 +694,7 @@
               </div>
             </a>
           </li>
-          <li class="creators__item">
+          <li class="creators__item" data-aos="zoom-in-left">
             <a href="#" class="creators__link">
               <div class="creators__left-side">
                 <img
@@ -792,7 +815,15 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     
+    <!-- Main Script -->
     <script src="assets/js/main.min.js"></script>
+    
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- === initialize AOS === -->
+    <script>
+      AOS.init();
+    </script>
     
   </body>
 </html>
